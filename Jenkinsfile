@@ -7,7 +7,7 @@ pipeline {
         SONAR_SERVER_NAME     = 'sonar-env' 
         SONAR_SCANNER_TOOL    = 'sonar-scanner'     
         GIT_CREDENTIALS_ID    = 'github-cred'
-        MANIFEST_REPO         = 'https://github.com/Alpha1ne/CI-CD-test.git'
+        MANIFEST_REPO         = 'https://github.com/Alpha1ne/Fast-api-chatbot.git'
         MANIFEST_BRANCH       = 'main'
     }
 
