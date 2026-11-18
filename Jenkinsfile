@@ -66,7 +66,7 @@ stage('Update Manifest Repo') {
 
                 git add k8s/deployment.yaml
                 git commit -m "Update fast-api-chatbot image to ${env.BUILD_NUMBER} [skip ci]"
-                git push origin ${MANIFEST_BRANCH}
+                git push origin HEAD:refs/heads/${MANIFEST_BRANCH}
             """
         }
     }
