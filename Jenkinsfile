@@ -3,7 +3,7 @@ pipeline {
 
      environment {
         DOCKER_CREDENTIALS_ID = 'jenkins-docker'
-        DOCKER_IMAGE          = 'faceless645/ci-cd' // Format: username/maker
+        DOCKER_IMAGE          = 'faceless645/fast-api-chatbot' // Format: username/maker
         SONAR_SERVER_NAME     = 'sonar-env' 
         SONAR_SCANNER_TOOL    = 'sonar-scanner'     
         GIT_CREDENTIALS_ID    = 'github-cred'
