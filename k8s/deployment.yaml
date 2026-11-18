@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: fast-api-chatbot
-          image: faceless645/fast-api-chatbot:latest
+          image: faceless645/fast-api-chatbot:7
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
