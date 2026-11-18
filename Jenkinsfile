@@ -56,13 +56,13 @@ pipeline {
                     sh "git clone ${MANIFEST_REPO} . || true"
                     withCredentials([usernamePassword(credentialsId: "${GIT_CREDENTIALS_ID}", usernameVariable: 'GH_USER', passwordVariable: 'GH_TOKEN')]) {
                         sh """
-                            git remote set-url origin https://\${GH_USER}:\${GH_TOKEN}@github.com/suhaaail2004/maker_pipeline.git
+                            git remote set-url origin https://\${GH_USER}:\${GH_TOKEN}@github.com/Alpha1ne/Fast-api-chatbot.git
                             git pull --rebase origin ${MANIFEST_BRANCH}
                             
-                            sed -i '/name: fast-api-chatbot/{n;s|image:.*|image: ${DOCKER_IMAGE}:${env.BUILD_NUMBER}|}' k8s/Deployment.yaml
+                            sed -i '/name: fast-api-chatbot/{n;s|image:.*|image: ${DOCKER_IMAGE}:${env.BUILD_NUMBER}|}' k8s/deployment.yaml
                             
-                            git config user.name "suhaaail2004"
-                            git config user.email "suhailshihab444@gmail.com"
+                            git config user.name "Alpha1ne"
+                            git config user.email "athulcmlptm@gmail.com"
                             git commit -am "chore(manifest): update fast-api-chatbot image tag to ${env.BUILD_NUMBER} [skip ci]"
                             git push origin ${MANIFEST_BRANCH}
                         """
